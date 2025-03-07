@@ -1192,16 +1192,15 @@ public static class RoleRevealCinematicPlayerPatch
             return true;
         var skinName = $"<sprite=\"Cast\" name=\"Skin{__instance.roleRevealCinematic.skinId}\">{Service.Game.Cast.GetSkinName(__instance.roleRevealCinematic.skinId)}";
         var roleName = role.GetTMPSprite() + role.ToColorizedDisplayString();
-        // var playerName = $"<sprite=\"PlayerNumbers\" name=\"PlayerNumbers_{__instance.currentPlayerNumber.Id}\">{Service.Game.Cast.GetPlayerName(__instance.currentPlayerNumber)}";
-        // Service.Game.Cast.GetPlayerName(__instance.currentPlayerNumber);
-        var text = __instance.l10n("CINE_ROLE_REVEAL_SKIN").Replace("%skin%", skinName);
+        // var playerName = $"<sprite=\"PlayerNumbers\" name=\"PlayerNumbers_{__instance.currentPlayerNumber}\">{Service.Game.Cast.GetPlayerName(__instance.currentPlayerNumber)}";
+        var text = __instance.l10n("FANCY_ROLE_REVEAL_SKIN").Replace("%role%", roleName).Replace("%skin%", skinName);
         __instance.skinTextPlayer.ShowText(text);
 
         __instance.totalDuration = Tuning.ROLE_REVEAL_TIME;
         __instance.silhouetteWrapper.gameObject.SetActive(true);
         __instance.silhouetteWrapper.SwapWithSilhouette((int)role);
 
-        var text2 = __instance.l10n("CINE_ROLE_REVEAL_ROLE").Replace("%role%", roleName);
+        var text2 = __instance.l10n("FANCY_ROLE_REVEAL_ROLE").Replace("%role%", roleName).Replace("%skin%", skinName);
         __instance.roleTextPlayer.ShowText(text2);
 
         if (Pepper.GetCurrentGameType() == GameType.Ranked)
