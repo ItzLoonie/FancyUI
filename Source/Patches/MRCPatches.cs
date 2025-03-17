@@ -1,4 +1,4 @@
-using BetterTOS2;
+/*using BetterTOS2;
 using Cinematics.Players;
 using Game;
 using Game.Characters;
@@ -846,4 +846,4 @@ public static class PlayerListPatch
 
         return false;
     }
-}
+/*

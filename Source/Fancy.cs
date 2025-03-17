@@ -111,7 +111,7 @@ public class Fancy
     public static ToggleOption ShowOverlayAsJailor;
     public static ToggleOption IconsInRoleReveal;
 
-    public static ToggleOption MiscRoleCustomisation;
+    /* public static ToggleOption MiscRoleCustomisation;
     public static StringOption RecruitLabel;
     public static StringOption TraitorLabel;
     public static StringOption VIPLabel;
@@ -165,7 +165,7 @@ public class Fancy
     public static ColorOption JudgeStart;
     public static ColorOption JudgeEnd;
     public static ColorOption AuditorStart;
-    public static ColorOption AuditorEnd;
+    public static ColorOption AuditorEnd;*/
 
 
     [LoadConfigs]
@@ -205,7 +205,7 @@ public class Fancy
         IconsInRoleReveal = new("ROLE_REVEAL_ICONS", true, PackType.Settings);
 
 
-        MiscRoleCustomisation = new("MRC", false, PackType.MiscRoleCustomisation);
+        /* MiscRoleCustomisation = new("MRC", false, PackType.MiscRoleCustomisation);
         RecruitLabel = new("RECRUIT_LABEL", "Recruited", PackType.MiscRoleCustomisation, _ => Constants.MRC())
         TraitorLabel = new("TRAITOR_LABEL", "Recruited", PackType.MiscRoleCustomisation, _ => Constants.MRC())
         VIPLabel = new("VIP_LABEL", "Recruited", PackType.MiscRoleCustomisation, _ => Constants.MRC())
@@ -263,7 +263,7 @@ public class Fancy
         LionsStart = new("LIONS_START", "#ffc34f", PackType.MiscRoleCustomisation, _ => Constants.MRC());
         LionsEnd = new("LIONS_END", "#ffc34f", PackType.MiscRoleCustomisation, _ => Constants.MRC());
         HawksStart = new("HAWKS_START", "#a81538", PackType.MiscRoleCustomisation, _ => Constants.MRC());
-        HawksEnd = new("HAWKS_END", "#a81538", PackType.MiscRoleCustomisation, _ => Constants.MRC());
+        HawksEnd = new("HAWKS_END", "#a81538", PackType.MiscRoleCustomisation, _ => Constants.MRC()); */
 
     }
 
