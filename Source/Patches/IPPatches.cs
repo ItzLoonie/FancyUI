@@ -1190,7 +1190,7 @@ public static class RoleRevealCinematicPlayerPatch
     {
         if (!Constants.IconsInRoleReveal() || role == Role.NONE)
             return true;
-        var skinName = $"<sprite=\"Cast\" name=\"Skin{__instance.roleRevealCinematic.skinId}\">{Service.Game.Cast.GetSkinName(__instance.roleRevealCinematic.skinId)}";
+        var skinName = Service.Game.Cast.GetHeadshot(Pepper.GetSkinIdByPosition(__instance.roleRevealCinematic.skinId)) + Service.Game.Cast.GetSkinName(__instance.roleRevealCinematic.skinId);
         var roleName = role.GetTMPSprite() + role.ToColorizedDisplayString();
         // var playerName = $"<sprite=\"PlayerNumbers\" name=\"PlayerNumbers_{__instance.currentPlayerNumber}\">{Service.Game.Cast.GetPlayerName(__instance.currentPlayerNumber)}";
         var text = __instance.l10n("FANCY_ROLE_REVEAL_SKIN").Replace("%role%", roleName).Replace("%skin%", skinName);

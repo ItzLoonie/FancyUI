@@ -5,6 +5,7 @@ public static class Constants
     public static bool PlayerPanelEasterEggs() => Fancy.PlayerPanelEasterEggs.Value;
 
     public static bool AllEasterEggs() => Fancy.AllEasterEggs.Value;
+    public static bool MRC() => Fancy.MiscRoleCustomisation.Value;
 
     public static int EasterEggChance() => (int)Fancy.EasterEggChance.Value;
 
